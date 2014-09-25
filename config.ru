@@ -1,0 +1,4 @@
+$: << '.'
+
+require 'webapp'
+run WebApp

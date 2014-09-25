@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Da Best!</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="navbar navbar-inverse" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Da Best</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+    <div class='container-fluid'>
+      <div id="item-collection" class='row'>
+        <div class="col-md-3">
+          <form id="add-favorite-item" action="#">
+            <div>
+              <label for="image">Image</label>
+              <input id="image" type="file">
+              <label for="name">Item Name</label>
+              <input id="name" type="text">
+              <label for="location_name">Location Name</label>
+              <input id="location_name" type="text">
+              <label for="visited_date">Visited Date</label>
+              <input id="visited_date" type="text">
+              <label for="address">Address</label>
+              <input id="address" type="text">
+              <button id="add-item" type="submit" class="btn btn-success add-item">Add Favorite</button>
+            </div>
+          </form>
+<!--           <div class="itemContainer">
+          </div> -->
+        </div>
+        <div id="map-view" class="col-md-8">
+        </div>
+      </div>
+    </div>
+    <script id="itemTemplate" type="text/template">
+      <img src="<%= image %>">
+      <ul>
+        <li><%= name %></li>
+        <li><%= location_name %></li>
+        <li><%= address %></li>
+        <li><%= visited_date %></li>
+      </ul>
+      <button type="button" class="btn btn-danger btn-xs delete-item" onclick="alert('warning');">Delete</button>
+    </script>
+    <script data-main="js/main" src="js/vendor/require.js"></script>
+  </body>
+
+</html>
