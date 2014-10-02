@@ -16,7 +16,7 @@ define('FavoriteItemRouter', [
     defaultRoute: function() {
       // Render an before fetching data to have actionable buttons
       this.collectionview.render();
-      this.collectionview.fetchData();
+      // this.collectionview.fetchData();
     }
   });
 

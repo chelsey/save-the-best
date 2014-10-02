@@ -53,11 +53,5 @@ define('ItemCollectionView', [
     }
   });
 
-  var items = [
-    { name: "French Toast", location_name: "Grandma's", address: "Maui, Hawaii", visited_date: "August 31, 2014" },
-    { name: "Shrimp", location_name: "Star Noodle", address: "Maui, Hawaii", visited_date: "August 30, 2014", image: 'http://asilverwareaffair.net/wp-content/uploads/2013/12/placeholder.png'},
-    { name: "Avocado Toast", location_name: "Danny's Apartment", address: "San Francisco, CA", visited_date: "July 20, 2014"}
-    ];
-
-  return ItemCollectionView(items);
+  return ItemCollectionView;
 });

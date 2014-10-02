@@ -8,9 +8,8 @@ define('FavoriteItemApp', [
     this.router = new Router();
     this.start = function() {
       // Triggering the initial route
-      Backbone.history.start({
-        pushState: true
-      });
+      Backbone.history.start();
+      // $(document).foundation();
     }
   }
 

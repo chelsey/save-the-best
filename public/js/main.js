@@ -3,7 +3,7 @@ requirejs.config({
   paths: {
     // External dependencies
     'backbone'   : 'vendor/backbone-min',
-    'backbonemap': 'vendor/backbone-min.map',
+    // 'backbonemap': 'vendor/backbone-min.map',
     'bootstrap'  : 'vendor/bootstrap.min',
     'jquery'     : 'vendor/jquery',
     'underscore' : 'vendor/underscore-min',
