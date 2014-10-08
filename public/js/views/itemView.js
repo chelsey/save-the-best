@@ -4,9 +4,6 @@ define('ItemView', [
   'text!templates/itemView.html'
 ], function(Backbone, _, template) {
   var ItemView = Backbone.View.extend({
-    // tagName: 'div',
-    // className: 'item-container',
-    // template: _.template( $('#itemTemplate').html() ),
 
     events: {
       'click .delete-item' : 'deleteItem'
@@ -14,7 +11,6 @@ define('ItemView', [
 
     initialize: function() {
       this.template = _.template(template);
-      this.editing  = !this.model.id;
     },
 
     deleteItem: function() {

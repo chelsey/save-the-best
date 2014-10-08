@@ -34,18 +34,15 @@ define('ItemCollectionView', [
     },
 
     addFavoriteItem: function(e) {
-      // e.preventDefault();
+      e.preventDefault();
 
-      // var formData = {};
+      var formData = {};
 
-      // $('#add-favorite-item div').children('input').each( function(i, el) {
-      //   if ( $(el).val() != '')
-      //   {
-      //     formData[el.id] = $(el).val();
-      //   }
-      // });
+      $('#add-favorite-item div').children('input').each( function(i, el) {
+        formData[el.id] = $(el).val();
+      });
 
-      this.collection.add( new FavoriteItem() );
+      this.collection.add( new FavoriteItem(formData));
     },
 
     // render an item by creating an ItemView and appending the
@@ -57,8 +54,6 @@ define('ItemCollectionView', [
       this.$el.prepend( itemView.render().el );
       newItem.slideDown();
     }
-
-
   });
 
   var initalItems = [{ name: "French Toast", location_name: "Grandma's", address: "Maui, Hawaii", visited_date: "August 31, 2014" },
