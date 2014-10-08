@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="navbar navbar-inverse" role="navigation">
-      <div class="container-fluid">
+      <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -23,10 +23,10 @@
         </div><!--/.nav-collapse -->
       </div>
     </div>
-    <div class='container-fluid'>
-      <div id="item-collection" class='row'>
-        <div class="col-md-3">
-          <form id="add-favorite-item" action="#">
+    <div class='container'>
+      <div class='row'>
+        <div id="item-collection" class="col-md-3">
+<!--           <form id="add-favorite-item" action="#">
             <div>
               <label for="image">Image</label>
               <input id="image" type="file">
@@ -38,27 +38,14 @@
               <input id="visited_date" type="text">
               <label for="address">Address</label>
               <input id="address" type="text">
-              <button id="add-item" type="submit" class="btn btn-success add-item">Add Favorite</button>
+              <button type="submit" class="btn btn-success add-item">Add Favorite</button>
             </div>
-          </form>
-<!--           <div class="itemContainer">
-          </div> -->
-        </div>
-        <div id="map-view" class="col-md-8">
-        </div>
+          </form> -->
+      </div>
+      <div id="map-view" class="col-md-8">
+        Map
       </div>
     </div>
-    <script id="itemTemplate" type="text/template">
-      <img src="<%= image %>">
-      <ul>
-        <li><%= name %></li>
-        <li><%= location_name %></li>
-        <li><%= address %></li>
-        <li><%= visited_date %></li>
-      </ul>
-      <button type="button" class="btn btn-danger btn-xs delete-item" onclick="alert('warning');">Delete</button>
-    </script>
-    <script data-main="js/main" src="js/vendor/require.js"></script>
+  <script data-main="js/main" src="js/vendor/require.js"></script>
   </body>
-
 </html>

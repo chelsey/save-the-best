@@ -1,14 +1,20 @@
 define('ItemView', [
   'backbone',
-  'underscore'
-], function(Backbone, _) {
+  'underscore',
+  'text!templates/itemView.html'
+], function(Backbone, _, template) {
   var ItemView = Backbone.View.extend({
-    tagName: 'div',
-    className: 'item-container',
-    template: _.template( $('#itemTemplate').html() ),
+    // tagName: 'div',
+    // className: 'item-container',
+    // template: _.template( $('#itemTemplate').html() ),
 
     events: {
       'click .delete-item' : 'deleteItem'
+    },
+
+    initialize: function() {
+      this.template = _.template(template);
+      this.editing  = !this.model.id;
     },
 
     deleteItem: function() {

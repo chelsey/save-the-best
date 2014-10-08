@@ -2,17 +2,17 @@ define('FavoriteItem', [
   'backbone',
   'underscore'
 ], function(Backbone, _) {
-  // Location Model
+  // Item Model
   // The basic **Item** model has an item_image, location name, a geographical location (coordinates), and a date visited.
   var FavoriteItem = Backbone.Model.extend({
     defaults: {
-      image: '',
-      name: '',
+      name: 'foobar name',
       location_name: '',
-      address: '',
+      address: '2316 westbury',
       latitude: '',
       longitude: '',
-      visited_date: ''
+      visited_date: '',
+      image: 'http://asilverwareaffair.net/wp-content/uploads/2013/12/placeholder.png'
     }
   });
 
