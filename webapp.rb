@@ -1,8 +1,20 @@
+require 'bundler/setup'
 require 'json'
 require 'sequel'
 require 'sinatra/base'
 
+require 'sinatra'
+require 'sinatra/activerecord'
+
+require './lib/configuration'
+
 class WebApp < Sinatra::Base
+
+  # configure do
+  #   Configuration.settings = settings
+  #   Configuration.setup!
+  # end
+
   get '/' do
     send_file 'public/index.html'
   end
